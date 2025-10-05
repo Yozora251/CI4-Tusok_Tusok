@@ -142,6 +142,11 @@
             font-weight: bold;
         }
 
+        .food-card p {
+            color: #ffffff;
+            /* ✅ Bright white text for descriptions */
+        }
+
         .add-btn {
             background-color: #4cc9f0;
             color: #0d1117;
