@@ -55,7 +55,7 @@
         }
 
         .hero {
-            background: url('https://images.unsplash.com/photo-1605478269580-3b299c4c45ea?auto=format&fit=crop&w=1600&q=80') center center/cover no-repeat;
+            background: url('https://i.pinimg.com/1200x/cc/22/d1/cc22d1deb7d96e1c4bb43360c49638cd.jpg') center center/cover no-repeat;
             min-height: 90vh;
             display: flex;
             align-items: center;
@@ -144,7 +144,6 @@
 
         .food-card p {
             color: #ffffff;
-            /* ✅ Bright white text for descriptions */
         }
 
         .add-btn {
@@ -159,36 +158,6 @@
         }
 
         .add-btn:hover {
-            background-color: #3a86ff;
-            color: white;
-        }
-
-        .pos-preview {
-            background-color: #161b22;
-            border-radius: 15px;
-            padding: 40px;
-            text-align: center;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-            margin-top: 60px;
-        }
-
-        .pos-preview h3 {
-            color: #4cc9f0;
-            margin-bottom: 20px;
-        }
-
-        .pos-btn {
-            background-color: #4cc9f0;
-            color: #0d1117;
-            font-weight: 600;
-            border-radius: 20px;
-            padding: 10px 25px;
-            border: none;
-            margin: 5px;
-            transition: 0.3s;
-        }
-
-        .pos-btn:hover {
             background-color: #3a86ff;
             color: white;
         }
@@ -256,15 +225,15 @@
         <div class="row g-4">
             <?php
             $foods = [
-                ["Fishball", "Crispy golden balls of fish — the ultimate tusok-tusok classic!", "https://images.unsplash.com/photo-1651457786225-f6e9cfb906c4?auto=format&fit=crop&w=600&q=80"],
-                ["Chicken Balls", "Juicy and flavorful, perfect with our sweet-spicy dipping sauce.", "https://images.unsplash.com/photo-1668616297920-71f85a68e45d?auto=format&fit=crop&w=600&q=80"],
-                ["Squid Ball", "Soft and chewy bites of squid — every dip is an explosion of flavor.", "https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=600&q=80"],
-                ["Kikiam", "Crunchy on the outside, savory on the inside — a crowd favorite.", "https://images.unsplash.com/photo-1670889584514-3e63a2bba58b?auto=format&fit=crop&w=600&q=80"],
-                ["Tokneneng", "Bright orange battered eggs — golden and bursting with taste.", "https://images.unsplash.com/photo-1695236572822-5a6a4c0ef327?auto=format&fit=crop&w=600&q=80"],
-                ["Gulaman", "Cool down with this sweet, refreshing drink after your tusok feast.", "https://images.unsplash.com/photo-1558640469-2d7e18a2d2b9?auto=format&fit=crop&w=600&q=80"],
-                ["Betamax", "Grilled congealed chicken blood cubes — smoky, bold, and iconic.", "https://images.unsplash.com/photo-1562967916-eb82221dfb36?auto=format&fit=crop&w=600&q=80"],
-                ["Calamares", "Crispy fried squid rings served with tangy vinegar dip.", "https://images.unsplash.com/photo-1592839715937-6a3e8cde8f25?auto=format&fit=crop&w=600&q=80"],
-                ["Dynamite", "Spicy green chili stuffed with cheese and wrapped in lumpia wrapper.", "https://images.unsplash.com/photo-1632179003909-04b4a6e2db38?auto=format&fit=crop&w=600&q=80"]
+                ["Fishball", "Crispy golden balls of fish — the ultimate tusok-tusok classic!", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTipxa_NalTjt7pQ9Ffcl-2gH4iBWBt1cDgFA&s"],
+                ["Chicken Balls", "Juicy and flavorful, perfect with our sweet-spicy dipping sauce.", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-4t_DkMraRyumricILW6Wb4TptCTIq5o1Ig&s"],
+                ["Squid Ball", "Soft and chewy bites of squid — every dip is an explosion of flavor.", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqcT3LsHowTBaqqCx5uTOx3WEnC3yuWBkprA&s"],
+                ["Kikiam", "Crunchy on the outside, savory on the inside — a crowd favorite.", "https://i0.wp.com/kimavinante.wordpress.com/wp-content/uploads/2017/09/kikiam.jpg?w=2000&h=&crop=1&ssl=1"],
+                ["Tokneneng", "Bright orange battered eggs — golden and bursting with taste.", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSHxPghN6jl306YAJdQOgo0KiWhxKjbAorxQ&s"],
+                ["Gulaman", "Cool down with this sweet, refreshing drink after your tusok feast.", "https://a0.anyrgb.com/pngimg/884/644/gulaman-carbonated-drink-black-russian-cuba-libre-coca-cola-slush-orange-soft-drink-carbonated-water-sonic-drivein-soda.png"],
+                ["Betamax", "Grilled congealed chicken blood cubes — smoky, bold, and iconic.", "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjO478dAtSQPdJMyTQ5nXGylDkW7om13PkA284dCfsc23anowR3Vg_NXrT93Z3nlJv2U1RSn-Tcd2bjICJs2OjqchuJvMMcULb5dZkR7PDtrwwymcA8QSMXf3uoRdLx4z-fKw2XWFvQ3xw/s400/IMG_sf6.jpg"],
+                ["Calamares", "Crispy fried squid rings served with tangy vinegar dip.", "https://i0.wp.com/www.russianfilipinokitchen.com/wp-content/uploads/2015/04/crispy-fried-calamari-01.jpg?w=582"],
+                ["Dynamite", "Spicy green chili stuffed with cheese and wrapped in lumpia wrapper.", "https://www.recipesbynora.com/wp-content/uploads/2024/04/Dynamite-Lumpia-Recipe-on-a-plate.jpg"]
             ];
 
             foreach ($foods as $food) {
@@ -281,20 +250,6 @@
           </div>';
             }
             ?>
-        </div>
-
-        <!-- POS Preview -->
-        <div class="pos-preview mt-5">
-            <h3>🧾 POS System Preview</h3>
-            <p>See how your orders are managed — quick, easy, and efficient.</p>
-            <div class="my-4">
-                <button class="pos-btn">View Orders</button>
-                <button class="pos-btn">Checkout</button>
-            </div>
-            <div class="border-top border-info pt-3 mt-3">
-                <p><strong>Current Order:</strong> Fishball x2, Tokneneng x1, Gulaman x1</p>
-                <h5>Total: ₱85.00</h5>
-            </div>
         </div>
     </section>
 

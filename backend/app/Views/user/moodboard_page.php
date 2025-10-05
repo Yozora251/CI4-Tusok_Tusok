@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tusok-Tusok POS | Mood Board</title>
+    <title>Tusok-Tusok | Mood Board</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
@@ -55,8 +55,8 @@
 
 <body>
 
-    <h1 class="mb-4">🎨 Tusok-Tusok POS Mood Board</h1>
-    <p class="text-light">Visual identity and design system for the Tusok-Tusok POS web application.</p>
+    <h1 class="mb-4">🎨 Tusok-Tusok Mood Board</h1>
+    <p class="text-light">Visual identity and design system for the Tusok-Tusok web application.</p>
 
     <div class="divider"></div>
 
