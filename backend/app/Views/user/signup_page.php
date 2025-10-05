@@ -96,7 +96,7 @@
     <div class="signup-card">
         <img src="/assets/circle.png" alt="Tusok-Tusok Logo" class="logo">
         <h2>Create an Account</h2>
-        <p class="mb-4">Join the Tusok-Tusok POS family today</p>
+        <p class="mb-4">Join the Tusok-Tusok family today</p>
 
         <form action="login.php" method="POST">
             <div class="mb-3">
