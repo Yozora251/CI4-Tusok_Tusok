@@ -45,6 +45,11 @@
             border-radius: 10px;
         }
 
+        .form-control::placeholder {
+            color: #a8cfff;
+            opacity: 0.9;
+        }
+
         .form-control:focus {
             border-color: #3a86ff;
             box-shadow: none;
