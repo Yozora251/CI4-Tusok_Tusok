@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tusok-Tusok | Mood Board</title>
+    <link rel="shortcut icon" type="image/png" href="/assets/tusokicon.ico" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
@@ -155,11 +156,11 @@
         <h2>Logos</h2>
         <div class="d-flex gap-4 mt-3">
             <div class="text-center">
-                <img src="https://cdn-icons-png.flaticon.com/512/3075/3075977.png" class="logo-sample" alt="Circle Logo">
+                <img src="/assets/circle.png" class="logo-sample" alt="Circle Logo">
                 <p>Main Logo – Circle</p>
             </div>
             <div class="text-center">
-                <img src="https://cdn-icons-png.flaticon.com/512/3082/3082039.png" class="logo-sample" alt="Square Logo">
+                <img src="/assets/square.png" class="logo-sample" alt="Square Logo">
                 <p>Main Logo – Square</p>
             </div>
         </div>

@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tusok-Tusok Street Foods</title>
+    <link rel="shortcut icon" type="image/png" href="/assets/tusokicon.ico" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
@@ -25,6 +26,13 @@
             font-weight: 800;
             font-size: 1.8rem;
             color: #4cc9f0 !important;
+        }
+
+        .navbar-brand img {
+            height: 45px;
+            width: 45px;
+            margin-right: 10px;
+            border-radius: 50%;
         }
 
         .nav-link {
@@ -191,10 +199,16 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
-            <a class="navbar-brand" href="#">Tusok-Tusok</a>
+            <!-- Logo + Brand -->
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="/assets/circle.png" alt="Tusok-Tusok Logo">
+                Tusok-Tusok
+            </a>
+
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav me-3">
                     <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
