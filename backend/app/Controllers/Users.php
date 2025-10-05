@@ -16,4 +16,9 @@ class Users extends BaseController
     {
         return view('user/login_page');
     }
+
+    public function signup()
+    {
+        return view('user/signup_page');
+    }
 }
