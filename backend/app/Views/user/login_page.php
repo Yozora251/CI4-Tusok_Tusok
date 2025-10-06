@@ -109,7 +109,7 @@
             <button type="submit" class="btn-login">Login</button>
         </form>
 
-        <p class="mt-4">Don’t have an account? <a href="signup.php" class="signup-link">Sign up here</a></p>
+        <p class="mt-4">Don’t have an account? <a href="/signup_page" class="signup-link">Sign up here</a></p>
     </div>
 
 </body>
