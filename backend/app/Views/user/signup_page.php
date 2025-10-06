@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login | Tusok-Tusok POS</title>
+    <title>Sign Up | Tusok-Tusok POS</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
@@ -18,16 +18,16 @@
             margin: 0;
         }
 
-        .login-card {
+        .signup-card {
             background-color: #161b22;
             border-radius: 15px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-            width: 380px;
+            width: 420px;
             padding: 40px 30px;
             text-align: center;
         }
 
-        .login-card h2 {
+        .signup-card h2 {
             color: #4cc9f0;
             font-weight: 700;
             margin-bottom: 25px;
@@ -35,13 +35,12 @@
 
         p {
             color: #ffffff;
-            /* make all paragraph text white */
         }
 
         .form-control {
             background-color: #0d1117;
             border: 1px solid #4cc9f0;
-            color: #e6edf3;
+            color: #f1f5f9;
             border-radius: 10px;
         }
 
@@ -52,10 +51,10 @@
 
         .form-control:focus {
             border-color: #3a86ff;
-            box-shadow: none;
+            box-shadow: 0 0 6px #3a86ff;
         }
 
-        .btn-login {
+        .btn-signup {
             background-color: #4cc9f0;
             color: #0d1117;
             font-weight: 600;
@@ -67,18 +66,18 @@
             transition: 0.3s;
         }
 
-        .btn-login:hover {
+        .btn-signup:hover {
             background-color: #3a86ff;
             color: #fff;
         }
 
-        .signup-link {
+        .login-link {
             color: #4cc9f0;
             text-decoration: none;
             font-weight: 500;
         }
 
-        .signup-link:hover {
+        .login-link:hover {
             text-decoration: underline;
             color: #3a86ff;
         }
@@ -93,22 +92,28 @@
 
 <body>
 
-    <div class="login-card">
+    <div class="signup-card">
         <img src="https://cdn-icons-png.flaticon.com/512/3075/3075977.png" alt="Tusok-Tusok Logo" class="logo">
-        <h2>Welcome Back!</h2>
-        <p class="mb-4">Login to your Tusok-Tusok account</p>
+        <h2>Create an Account</h2>
+        <p class="mb-4">Join the Tusok-Tusok POS family today</p>
 
-        <form action="dashboard.php" method="POST">
+        <form action="login.php" method="POST">
+            <div class="mb-3">
+                <input type="text" class="form-control" name="fullname" placeholder="Full Name" required>
+            </div>
             <div class="mb-3">
                 <input type="text" class="form-control" name="username" placeholder="Username" required>
             </div>
             <div class="mb-3">
+                <input type="email" class="form-control" name="email" placeholder="Email Address" required>
+            </div>
+            <div class="mb-3">
                 <input type="password" class="form-control" name="password" placeholder="Password" required>
             </div>
-            <button type="submit" class="btn-login">Login</button>
+            <button type="submit" class="btn-signup">Sign Up</button>
         </form>
 
-        <p class="mt-4">Don’t have an account? <a href="signup.php" class="signup-link">Sign up here</a></p>
+        <p class="mt-4">Already have an account? <a href="login.php" class="login-link">Login here</a></p>
     </div>
 
 </body>
