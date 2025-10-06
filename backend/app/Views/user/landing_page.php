@@ -217,7 +217,7 @@
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
                 <div class="d-flex">
-                    <a href="login.php" class="auth-btn">Login</a>
+                    <a href="/login_page" class="btn">Login</a>
                     <a href="signup.php" class="auth-btn">Sign Up</a>
                 </div>
             </div>
