@@ -200,7 +200,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
             <!-- Logo + Brand -->
-            <a class="navbar-brand d-flex align-items-center" href="#">
+            <a class="d-flex align-items-center navbar-brand" href="#">
                 <img src="/assets/circle.png" alt="Tusok-Tusok Logo">
                 Tusok-Tusok
             </a>
@@ -210,15 +210,15 @@
             </button>
 
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav me-3">
+                <ul class="me-3 navbar-nav">
                     <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
                     <li class="nav-item"><a class="nav-link" href="#promo">Promos</a></li>
                     <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
                 <div class="d-flex">
-                    <a href="login.php" class="auth-btn">Login</a>
-                    <a href="signup.php" class="auth-btn">Sign Up</a>
+                    <a href="/login_page" class="auth-btn">Login</a>
+                    <a href="/signup_page" class="auth-btn">Sign Up</a>
                 </div>
             </div>
         </div>
@@ -234,7 +234,7 @@
     </section>
 
     <!-- Menu -->
-    <section id="menu" class="container py-5">
+    <section id="menu" class="py-5 container">
         <h2 class="section-title">Our Signature Street Foods</h2>
         <div class="row g-4">
             <?php
@@ -253,7 +253,7 @@
             foreach ($foods as $food) {
                 echo '
           <div class="col-md-4">
-            <div class="card food-card text-center">
+            <div class="text-center card food-card">
               <img src="' . $food[2] . '" alt="' . $food[0] . '">
               <div class="card-body">
                 <h5 class="card-title">' . $food[0] . '</h5>
@@ -275,9 +275,9 @@
     </section>
 
     <!-- About -->
-    <section id="about" class="container py-5">
+    <section id="about" class="py-5 container">
         <h2 class="section-title">About Tusok-Tusok</h2>
-        <p class="text-center mx-auto" style="max-width: 700px;">
+        <p class="mx-auto text-center" style="max-width: 700px;">
             Tusok-Tusok Street Foods celebrates the heart of Filipino night markets — the laughter, the smoky scent, and the taste of nostalgia.
             Each bite brings you closer to the Filipino spirit of sharing and enjoying simple joys together.
             From Fishballs to Dynamite, we bring street food comfort to your hands.

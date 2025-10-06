@@ -114,7 +114,7 @@
             <button type="submit" class="btn-signup">Sign Up</button>
         </form>
 
-        <p class="mt-4">Already have an account? <a href="login.php" class="login-link">Login here</a></p>
+        <p class="mt-4">Already have an account? <a href="/login_page" class="login-link">Login here</a></p>
     </div>
 
 </body>
