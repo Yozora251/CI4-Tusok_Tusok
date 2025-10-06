@@ -8,3 +8,4 @@ use CodeIgniter\Router\RouteCollection;
 $routes->get('/', 'Users::index');
 $routes->get('/login_page', 'Users::login');
 $routes->get('/signup_page', 'Users::signup');
+$routes->get('/moodboard_page', 'Users::moodboard');
