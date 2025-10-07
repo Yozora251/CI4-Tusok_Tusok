@@ -212,7 +212,7 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="me-3 navbar-nav">
                     <li class="nav-item"><a class="nav-link" href="/moodboard_page">Moodboard</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#roadmap">Roadmap</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/roadmap_page">Roadmap</a></li>
                 </ul>
                 <div class="d-flex">
                     <a href="/login_page" class="auth-btn">Login</a>
