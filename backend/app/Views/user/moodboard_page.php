@@ -77,7 +77,7 @@
         <a href="/" class="back-home-btn">← Back Home</a>
     </div>
 
-    <h1 class="mb-4">🎨 Tusok-Tusok Mood Board</h1>
+    <h1 class="mb-4">Tusok-Tusok Mood Board</h1>
     <p class="text-light">Visual identity and design system for the Tusok-Tusok web application.</p>
 
     <div class="divider"></div>
