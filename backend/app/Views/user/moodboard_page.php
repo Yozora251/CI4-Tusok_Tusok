@@ -51,10 +51,31 @@
             border-bottom: 1px solid #4cc9f0;
             margin: 30px 0;
         }
+
+        .back-home-btn {
+            background-color: #4cc9f0;
+            color: #0d1117;
+            font-weight: 600;
+            border: none;
+            border-radius: 8px;
+            padding: 8px 18px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .back-home-btn:hover {
+            background-color: #3a86ff;
+            color: #fff;
+        }
     </style>
 </head>
 
 <body>
+
+    <!-- Back Home Button -->
+    <div class="mb-4">
+        <a href="/" class="back-home-btn">← Back Home</a>
+    </div>
 
     <h1 class="mb-4">🎨 Tusok-Tusok Mood Board</h1>
     <p class="text-light">Visual identity and design system for the Tusok-Tusok web application.</p>

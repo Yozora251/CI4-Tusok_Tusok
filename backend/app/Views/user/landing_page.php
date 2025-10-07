@@ -154,20 +154,20 @@
             color: #ffffff;
         }
 
-        .add-btn {
-            background-color: #4cc9f0;
-            color: #0d1117;
+        .view-btn {
+            background-color: transparent;
+            border: 1px solid #4cc9f0;
+            color: #4cc9f0;
             font-weight: 600;
             border-radius: 20px;
             padding: 8px 20px;
-            border: none;
             transition: 0.3s;
             margin-top: 10px;
         }
 
-        .add-btn:hover {
-            background-color: #3a86ff;
-            color: white;
+        .view-btn:hover {
+            background-color: #4cc9f0;
+            color: #0d1117;
         }
 
         .promo {
@@ -211,10 +211,8 @@
 
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="me-3 navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#promo">Promos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/moodboard_page">Moodboard</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#roadmap">Roadmap</a></li>
                 </ul>
                 <div class="d-flex">
                     <a href="/login_page" class="auth-btn">Login</a>
@@ -258,30 +256,13 @@
               <div class="card-body">
                 <h5 class="card-title">' . $food[0] . '</h5>
                 <p>' . $food[1] . '</p>
-                <button class="add-btn">Add to Cart</button>
+                <button class="view-btn">View Details</button>
               </div>
             </div>
           </div>';
             }
             ?>
         </div>
-    </section>
-
-    <!-- Promo -->
-    <section id="promo" class="promo">
-        <h2>🔥 Night Market Special!</h2>
-        <p>Buy any 4 sticks and get a free cup of Gulaman to refresh your night!</p>
-        <a href="#menu" class="btn">Claim Offer</a>
-    </section>
-
-    <!-- About -->
-    <section id="about" class="py-5 container">
-        <h2 class="section-title">About Tusok-Tusok</h2>
-        <p class="mx-auto text-center" style="max-width: 700px;">
-            Tusok-Tusok Street Foods celebrates the heart of Filipino night markets — the laughter, the smoky scent, and the taste of nostalgia.
-            Each bite brings you closer to the Filipino spirit of sharing and enjoying simple joys together.
-            From Fishballs to Dynamite, we bring street food comfort to your hands.
-        </p>
     </section>
 
     <footer>

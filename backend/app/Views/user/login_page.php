@@ -36,7 +36,6 @@
 
         p {
             color: #ffffff;
-            /* make all paragraph text white */
         }
 
         .form-control {
@@ -89,6 +88,25 @@
             margin-bottom: 15px;
             filter: drop-shadow(0 0 6px #4cc9f0);
         }
+
+        .btn-back {
+            background-color: transparent;
+            border: 1px solid #4cc9f0;
+            color: #4cc9f0;
+            border-radius: 25px;
+            padding: 8px 20px;
+            font-weight: 600;
+            margin-top: 15px;
+            text-decoration: none;
+            display: inline-block;
+            transition: 0.3s;
+        }
+
+        .btn-back:hover {
+            background-color: #4cc9f0;
+            color: #0d1117;
+            text-decoration: none;
+        }
     </style>
 </head>
 
@@ -110,6 +128,9 @@
         </form>
 
         <p class="mt-4">Don’t have an account? <a href="/signup_page" class="signup-link">Sign up here</a></p>
+
+        <!-- ✅ Back Home Button -->
+        <a href="/" class="btn-back">← Back Home</a>
     </div>
 
 </body>
