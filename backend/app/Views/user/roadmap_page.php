@@ -120,7 +120,7 @@
 
     <!-- Active/Planned Section -->
     <section class="text-center">
-        <h2 class="mb-3">🚧 In Progress & Planned</h2>
+        <h2 class="mb-3">In Progress & Planned</h2>
 
         <div class="section-card">
             <div class="d-flex justify-content-between align-items-start">
@@ -172,7 +172,7 @@
 
     <!-- Completed Section -->
     <section class="text-center">
-        <h2 class="mb-3">✅ Completed</h2>
+        <h2 class="mb-3">Completed</h2>
 
         <div class="section-card">
             <div class="d-flex justify-content-between align-items-start">
