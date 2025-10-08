@@ -16,37 +16,60 @@
             padding: 0;
         }
 
-        nav {
+        /* HEADER STYLES */
+        header {
             background-color: #0d1b2a;
-            padding: 15px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 60px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            position: sticky;
+            top: 0;
+            z-index: 10;
         }
 
-        .navbar-brand {
+        .brand {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
             font-weight: 800;
             font-size: 1.8rem;
-            color: #4cc9f0 !important;
+            color: #4cc9f0;
         }
 
-        .navbar-brand img {
+        .brand img {
             height: 45px;
             width: 45px;
             margin-right: 10px;
             border-radius: 50%;
         }
 
-        .nav-link {
-            color: #a9bcd0 !important;
+        /* NAVIGATION WRAPPER */
+        .nav-group {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: #a9bcd0;
             font-weight: 500;
-            margin-right: 15px;
+            text-decoration: none;
             transition: 0.3s;
         }
 
-        .nav-link:hover {
-            color: #4cc9f0 !important;
+        .nav-links a:hover {
+            color: #4cc9f0;
         }
 
-        .auth-btn {
+        .auth-buttons a {
+            text-decoration: none;
             background-color: transparent;
             border: 1px solid #4cc9f0;
             color: #4cc9f0;
@@ -54,14 +77,14 @@
             font-weight: 600;
             padding: 6px 16px;
             transition: 0.3s;
-            margin-left: 10px;
         }
 
-        .auth-btn:hover {
+        .auth-buttons a:hover {
             background-color: #4cc9f0;
             color: #0d1117;
         }
 
+        /* HERO SECTION */
         .hero {
             background: url('https://i.pinimg.com/1200x/cc/22/d1/cc22d1deb7d96e1c4bb43360c49638cd.jpg') center center/cover no-repeat;
             min-height: 90vh;
@@ -170,20 +193,6 @@
             color: #0d1117;
         }
 
-        .promo {
-            background: linear-gradient(135deg, #1e2a47, #16213e);
-            color: #e6edf3;
-            text-align: center;
-            padding: 60px 20px;
-            border-top: 2px solid #4cc9f0;
-            border-bottom: 2px solid #4cc9f0;
-        }
-
-        .promo h2 {
-            color: #4cc9f0;
-            font-weight: 700;
-        }
-
         footer {
             background-color: #0d1b2a;
             color: #a9bcd0;
@@ -191,38 +200,54 @@
             padding: 20px 0;
             border-top: 1px solid #4cc9f0;
         }
+
+        /* Responsive Header */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+                gap: 10px;
+            }
+
+            .nav-group {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .nav-links {
+                flex-direction: column;
+            }
+
+            .auth-buttons {
+                flex-direction: column;
+            }
+        }
     </style>
 </head>
 
 <body>
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container">
-            <!-- Logo + Brand -->
-            <a class="d-flex align-items-center navbar-brand" href="#">
-                <img src="/assets/circle.png" alt="Tusok-Tusok Logo">
-                Tusok-Tusok
-            </a>
+    <!-- HEADER -->
+    <header>
+        <a href="#" class="brand">
+            <img src="/assets/circle.png" alt="Tusok-Tusok Logo">
+            Tusok-Tusok
+        </a>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+        <div class="nav-group">
+            <nav class="nav-links">
+                <a href="/moodboard_page">Moodboard</a>
+                <a href="/roadmap_page">Roadmap</a>
+            </nav>
 
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="me-3 navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="/moodboard_page">Moodboard</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/roadmap_page">Roadmap</a></li>
-                </ul>
-                <div class="d-flex">
-                    <a href="/login_page" class="auth-btn">Login</a>
-                    <a href="/signup_page" class="auth-btn">Sign Up</a>
-                </div>
+            <div class="auth-buttons">
+                <a href="/login_page">Login</a>
+                <a href="/signup_page">Sign Up</a>
             </div>
         </div>
-    </nav>
+    </header>
 
-    <!-- Hero -->
+    <!-- HERO -->
     <section class="hero">
         <div class="hero-content">
             <h1>Tusok-Tusok at Night</h1>
@@ -231,7 +256,7 @@
         </div>
     </section>
 
-    <!-- Menu -->
+    <!-- MENU -->
     <section id="menu" class="py-5 container">
         <h2 class="section-title">Our Signature Street Foods</h2>
         <div class="row g-4">
@@ -265,11 +290,9 @@
         </div>
     </section>
 
-    <footer>
-        <p>&copy; <?php echo date("Y"); ?> Tusok-Tusok Street Foods | Crafted with 💙 in the Philippines</p>
-    </footer>
+    <!--footer-->
+    <?= view('components/footer') ?>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

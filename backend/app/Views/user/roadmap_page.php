@@ -78,7 +78,6 @@
             color: #0d1117;
         }
 
-        /* Priority colors with good contrast */
         .priority-high {
             color: #ffb84c;
             font-weight: 600;
@@ -179,7 +178,7 @@
                 <h3>Authentication System</h3>
                 <span class="status-badge status-complete">Completed</span>
             </div>
-            <p class="mt-2 mb-1">Secure login and signup system for admin and customers.</p>
+            <p class="mt-2 mb-1">Secure login and signup system.</p>
             <small class="priority-high">Priority: High</small>
         </div>
     </section>
