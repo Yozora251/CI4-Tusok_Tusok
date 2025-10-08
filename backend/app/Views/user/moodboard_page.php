@@ -2,190 +2,134 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tusok-Tusok | Mood Board</title>
     <link rel="shortcut icon" type="image/png" href="/assets/tusokicon.ico" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         body {
-            background-color: #0d1117;
-            color: #e6edf3;
             font-family: 'Poppins', sans-serif;
-            padding: 40px;
-        }
-
-        h1,
-        h2,
-        h3 {
-            color: #4cc9f0;
-            font-weight: 700;
-        }
-
-        .color-box {
-            height: 50px;
-            border-radius: 8px;
-            margin-bottom: 8px;
-        }
-
-        .card-sample {
-            background-color: #161b22;
-            border: 1px solid #4cc9f0;
-            border-radius: 10px;
-            padding: 20px;
-            color: #e6edf3;
-        }
-
-        .btn-sample {
-            margin: 5px;
-            border-radius: 8px;
-        }
-
-        .logo-sample {
-            width: 120px;
-            border-radius: 10px;
-            box-shadow: 0 0 8px #4cc9f0;
-        }
-
-        .divider {
-            border-bottom: 1px solid #4cc9f0;
-            margin: 30px 0;
-        }
-
-        .back-home-btn {
-            background-color: #4cc9f0;
-            color: #0d1117;
-            font-weight: 600;
-            border: none;
-            border-radius: 8px;
-            padding: 8px 18px;
-            text-decoration: none;
-            transition: 0.3s;
-        }
-
-        .back-home-btn:hover {
-            background-color: #3a86ff;
-            color: #fff;
         }
     </style>
 </head>
 
-<body>
+<body class="bg-[#0d1117] text-[#e6edf3]">
 
-    <!-- Back Home Button -->
-    <div class="mb-4">
-        <a href="/" class="back-home-btn">← Back Home</a>
-    </div>
+    <main class="p-10">
 
-    <h1 class="mb-4">Tusok-Tusok Mood Board</h1>
-    <p class="text-light">Visual identity and design system for the Tusok-Tusok web application.</p>
+        <?= view('components/buttons/back_button.php') ?>
 
-    <div class="divider"></div>
 
-    <!-- Color System -->
-    <section>
-        <h2>Color System</h2>
-        <p>Main palette featuring shades of dark blue, cyan, and white.</p>
-        <div class="row mt-3">
-            <div class="col-md-2">
-                <div class="color-box" style="background-color:#0d1117;"></div>
-                <p>#0D1117 (Background)</p>
-            </div>
-            <div class="col-md-2">
-                <div class="color-box" style="background-color:#161b22;"></div>
-                <p>#161B22 (Card Surface)</p>
-            </div>
-            <div class="col-md-2">
-                <div class="color-box" style="background-color:#4cc9f0;"></div>
-                <p>#4CC9F0 (Accent Blue)</p>
-            </div>
-            <div class="col-md-2">
-                <div class="color-box" style="background-color:#3a86ff;"></div>
-                <p>#3A86FF (Primary)</p>
-            </div>
-            <div class="col-md-2">
-                <div class="color-box" style="background-color:#e6edf3;"></div>
-                <p>#E6EDF3 (Text Color)</p>
-            </div>
-        </div>
-    </section>
+        <h1 class="text-3xl font-bold text-[#4cc9f0] mb-3">Tusok-Tusok Mood Board</h1>
+        <p class="text-[#e6edf3]/90">Visual identity and design system for the Tusok-Tusok web application.</p>
 
-    <div class="divider"></div>
+        <div class="border-b border-[#4cc9f0] my-8"></div>
 
-    <!-- Typography -->
-    <section>
-        <h2>Typography</h2>
-        <p><strong>Heading font:</strong> Poppins — <span style="color:#4cc9f0;">"Taste the Street"</span></p>
-        <p><strong>Body font:</strong> Poppins Regular — "Your everyday tusok-tusok made digital."</p>
-    </section>
-
-    <div class="divider"></div>
-
-    <!-- Buttons -->
-    <section>
-        <h2>Buttons</h2>
-        <div class="mb-3">
-            <p>Light Mode</p>
-            <button class="btn btn-primary btn-sample" style="background-color:#3a86ff;border:none;">Primary</button>
-            <button class="btn btn-secondary btn-sample" style="background-color:#4cc9f0;border:none;">Secondary</button>
-            <button class="btn btn-outline-light btn-sample">Outline</button>
-            <button class="btn btn-dark btn-sample" disabled>Disabled</button>
-        </div>
-        <div>
-            <p>Dark Mode</p>
-            <button class="btn btn-primary btn-sample" style="background-color:#4cc9f0;border:none;">Primary</button>
-            <button class="btn btn-secondary btn-sample" style="background-color:#3a86ff;border:none;">Secondary</button>
-            <button class="btn btn-outline-info btn-sample">Outline</button>
-            <button class="btn btn-secondary btn-sample" disabled>Disabled</button>
-        </div>
-    </section>
-
-    <div class="divider"></div>
-
-    <!-- Card Samples -->
-    <section>
-        <h2>Card Samples</h2>
-        <div class="row g-3 mt-2">
-            <div class="col-md-4">
-                <div class="card-sample">
-                    <h4>Orders Completed</h4>
-                    <p>1,254</p>
-                    <a href="#" class="text-info">View Details</a>
+        <!-- Color System -->
+        <section>
+            <h2 class="text-2xl font-bold text-[#4cc9f0]">Color System</h2>
+            <p>Main palette featuring shades of dark blue, cyan, and white.</p>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 mt-5">
+                <div>
+                    <div class="h-12 rounded-md mb-2 bg-[#0d1117]"></div>
+                    <p>#0D1117 (Background)</p>
+                </div>
+                <div>
+                    <div class="h-12 rounded-md mb-2 bg-[#161b22]"></div>
+                    <p>#161B22 (Card Surface)</p>
+                </div>
+                <div>
+                    <div class="h-12 rounded-md mb-2 bg-[#4cc9f0]"></div>
+                    <p>#4CC9F0 (Accent Blue)</p>
+                </div>
+                <div>
+                    <div class="h-12 rounded-md mb-2 bg-[#3a86ff]"></div>
+                    <p>#3A86FF (Primary)</p>
+                </div>
+                <div>
+                    <div class="h-12 rounded-md mb-2 bg-[#e6edf3]"></div>
+                    <p>#E6EDF3 (Text Color)</p>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="card-sample">
-                    <h4>Top Seller</h4>
+        </section>
+
+        <div class="border-b border-[#4cc9f0] my-8"></div>
+
+        <!-- Typography -->
+        <section>
+            <h2 class="text-2xl font-bold text-[#4cc9f0] mb-2">Typography</h2>
+            <p><strong>Heading font:</strong> Poppins — <span class="text-[#4cc9f0]">"Taste the Street"</span></p>
+            <p><strong>Body font:</strong> Poppins Regular — "Your everyday tusok-tusok made digital."</p>
+        </section>
+
+        <div class="border-b border-[#4cc9f0] my-8"></div>
+
+        <!-- Buttons -->
+        <section>
+            <h2 class="text-2xl font-bold text-[#4cc9f0] mb-3">Buttons</h2>
+            <div class="mb-5">
+                <p class="mb-2">Light Mode</p>
+                <button class="bg-[#3a86ff] text-white px-4 py-2 rounded-md mr-2">Primary</button>
+                <button class="bg-[#4cc9f0] text-[#0d1117] px-4 py-2 rounded-md mr-2">Secondary</button>
+                <button class="border border-white px-4 py-2 rounded-md mr-2">Outline</button>
+                <button class="bg-gray-600 text-gray-300 px-4 py-2 rounded-md cursor-not-allowed" disabled>Disabled</button>
+            </div>
+            <div>
+                <p class="mb-2">Dark Mode</p>
+                <button class="bg-[#4cc9f0] text-[#0d1117] px-4 py-2 rounded-md mr-2">Primary</button>
+                <button class="bg-[#3a86ff] text-white px-4 py-2 rounded-md mr-2">Secondary</button>
+                <button class="border border-[#4cc9f0] text-[#4cc9f0] px-4 py-2 rounded-md mr-2">Outline</button>
+                <button class="bg-gray-700 text-gray-400 px-4 py-2 rounded-md cursor-not-allowed" disabled>Disabled</button>
+            </div>
+        </section>
+
+        <div class="border-b border-[#4cc9f0] my-8"></div>
+
+        <!-- Card Samples -->
+        <section>
+            <h2 class="text-2xl font-bold text-[#4cc9f0] mb-3">Card Samples</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-[#161b22] border border-[#4cc9f0] rounded-lg p-5">
+                    <h4 class="font-semibold text-lg mb-2">Orders Completed</h4>
+                    <p class="text-xl">1,254</p>
+                    <a href="#" class="text-[#4cc9f0] mt-2 inline-block">View Details</a>
+                </div>
+                <div class="bg-[#161b22] border border-[#4cc9f0] rounded-lg p-5">
+                    <h4 class="font-semibold text-lg mb-2">Top Seller</h4>
                     <p>Fishball Combo</p>
-                    <a href="#" class="text-info">View Details</a>
+                    <a href="#" class="text-[#4cc9f0] mt-2 inline-block">View Details</a>
                 </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card-sample">
-                    <h4>Customer Review</h4>
+                <div class="bg-[#161b22] border border-[#4cc9f0] rounded-lg p-5">
+                    <h4 class="font-semibold text-lg mb-2">Customer Review</h4>
                     <p>"Best tusok-tusok experience ever!"</p>
                     <small>– Juan Dela Cruz</small>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <div class="divider"></div>
+        <div class="border-b border-[#4cc9f0] my-8"></div>
 
-    <!-- Logos -->
-    <section>
-        <h2>Logos</h2>
-        <div class="d-flex gap-4 mt-3">
-            <div class="text-center">
-                <img src="/assets/circle.png" class="logo-sample" alt="Circle Logo">
-                <p>Main Logo – Circle</p>
+        <!-- Logos -->
+        <section>
+            <h2 class="text-2xl font-bold text-[#4cc9f0] mb-3">Logos</h2>
+            <div class="flex flex-wrap gap-8 mt-4">
+                <div class="text-center">
+                    <img src="/assets/circle.png" alt="Circle Logo" class="w-32 rounded-lg shadow-lg shadow-[#4cc9f0]/50 mx-auto mb-2">
+                    <p>Main Logo – Circle</p>
+                </div>
+                <div class="text-center">
+                    <img src="/assets/square.png" alt="Square Logo" class="w-32 rounded-lg shadow-lg shadow-[#4cc9f0]/50 mx-auto mb-2">
+                    <p>Main Logo – Square</p>
+                </div>
             </div>
-            <div class="text-center">
-                <img src="/assets/square.png" class="logo-sample" alt="Square Logo">
-                <p>Main Logo – Square</p>
-            </div>
-        </div>
-    </section>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <?= view('components/footer') ?>
 
 </body>
 
