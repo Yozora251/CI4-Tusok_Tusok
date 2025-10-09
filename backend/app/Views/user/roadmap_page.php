@@ -17,97 +17,82 @@
 
 <body class="bg-[#0d1117] text-[#e6edf3] flex flex-col min-h-screen">
 
+    <!-- Header -->
+    <?= view('components/header') ?>
+
     <!-- Main Content Wrapper -->
-    <div class="flex-grow p-10">
+    <main class="flex-grow p-10 max-w-7xl mx-auto">
 
-        <!-- Back Home Button -->
-        <div class="mb-6">
-            <a href="/"
-                class="bg-[#4cc9f0] text-[#0d1117] font-semibold rounded-lg px-5 py-2 hover:bg-[#3a86ff] hover:text-white transition">
-                ← Back Home
-            </a>
-        </div>
-
-        <!-- Header -->
-        <div class="text-center mb-10">
-            <h1 class="text-3xl font-bold text-[#4cc9f0] mb-2">Tusok-Tusok Roadmap</h1>
-            <p class="text-[#e6edf3]/90">A simple overview of our ongoing and completed modules.</p>
-        </div>
+        <!-- Hero Section -->
+        <section class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold text-[#4cc9f0] mb-3">Tusok-Tusok Roadmap</h1>
+            <p class="text-[#e6edf3]/90 text-lg">See what’s in progress, planned, and completed for our Tusok-Tusok platform.</p>
+        </section>
 
         <!-- In Progress & Planned -->
-        <section class="text-center">
-            <h2 class="text-2xl font-bold text-[#4cc9f0] mb-6">In Progress & Planned</h2>
+        <section>
+            <h2 class="text-2xl font-bold text-[#4cc9f0] mb-8 text-center">In Progress & Planned</h2>
+            <div class="grid gap-8 md:grid-cols-2">
+                <?= view('components/cards/roadmap_card', [
+                    "title" => "User Management",
+                    "description" => "Manage accounts for admins and customers.",
+                    "status" => "In Progress",
+                    "priority" => "High",
+                    "statusClass" => "bg-[#ffb84c]"
+                ]) ?>
 
-            <!-- Cards -->
-            <div
-                class="bg-[#161b22] border border-[#4cc9f0] rounded-xl p-5 w-[90%] max-w-lg mx-auto mb-6 shadow-md shadow-[#4cc9f0]/10">
-                <div class="flex justify-between items-start">
-                    <h3 class="text-xl font-semibold text-[#4cc9f0]">User Management</h3>
-                    <span class="text-sm font-semibold bg-[#ffb84c] text-[#0d1117] px-3 py-1 rounded-md">In Progress</span>
-                </div>
-                <p class="mt-2 mb-1 text-[#e6edf3]/90">Manage accounts for admins and customers.</p>
-                <small class="text-[#ffb84c] font-semibold">Priority: High</small>
-            </div>
+                <?= view('components/cards/roadmap_card', [
+                    "title" => "Menu Management",
+                    "description" => "Add or update the menu like fishballs, kikiam, and tokneneng.",
+                    "status" => "Planned",
+                    "priority" => "Medium",
+                    "statusClass" => "bg-[#4cc9f0]"
+                ]) ?>
 
-            <div
-                class="bg-[#161b22] border border-[#4cc9f0] rounded-xl p-5 w-[90%] max-w-lg mx-auto mb-6 shadow-md shadow-[#4cc9f0]/10">
-                <div class="flex justify-between items-start">
-                    <h3 class="text-xl font-semibold text-[#4cc9f0]">Menu Management</h3>
-                    <span class="text-sm font-semibold bg-[#4cc9f0] text-[#0d1117] px-3 py-1 rounded-md">Planned</span>
-                </div>
-                <p class="mt-2 mb-1 text-[#e6edf3]/90">Add or update the menu like fishballs, kikiam, and tokneneng.</p>
-                <small class="text-[#4cc9f0] font-semibold">Priority: Medium</small>
-            </div>
+                <?= view('components/cards/roadmap_card', [
+                    "title" => "Order Management",
+                    "description" => "Process and track customer orders efficiently.",
+                    "status" => "Planned",
+                    "priority" => "Medium",
+                    "statusClass" => "bg-[#4cc9f0]"
+                ]) ?>
 
-            <div
-                class="bg-[#161b22] border border-[#4cc9f0] rounded-xl p-5 w-[90%] max-w-lg mx-auto mb-6 shadow-md shadow-[#4cc9f0]/10">
-                <div class="flex justify-between items-start">
-                    <h3 class="text-xl font-semibold text-[#4cc9f0]">Order Management</h3>
-                    <span class="text-sm font-semibold bg-[#4cc9f0] text-[#0d1117] px-3 py-1 rounded-md">Planned</span>
-                </div>
-                <p class="mt-2 mb-1 text-[#e6edf3]/90">Process and track customer orders efficiently.</p>
-                <small class="text-[#4cc9f0] font-semibold">Priority: Medium</small>
-            </div>
+                <?= view('components/cards/roadmap_card', [
+                    "title" => "Dashboard Overview",
+                    "description" => "View sales insights and popular street food stats.",
+                    "status" => "Backlog",
+                    "priority" => "Low",
+                    "statusClass" => "bg-gray-400"
+                ]) ?>
 
-            <div
-                class="bg-[#161b22] border border-[#4cc9f0] rounded-xl p-5 w-[90%] max-w-lg mx-auto mb-6 shadow-md shadow-[#4cc9f0]/10">
-                <div class="flex justify-between items-start">
-                    <h3 class="text-xl font-semibold text-[#4cc9f0]">Dashboard Overview</h3>
-                    <span class="text-sm font-semibold bg-gray-400 text-[#0d1117] px-3 py-1 rounded-md">Backlog</span>
-                </div>
-                <p class="mt-2 mb-1 text-[#e6edf3]/90">View sales insights and popular street food stats.</p>
-                <small class="text-gray-400 font-semibold">Priority: Low</small>
-            </div>
-
-            <div
-                class="bg-[#161b22] border border-[#4cc9f0] rounded-xl p-5 w-[90%] max-w-lg mx-auto mb-6 shadow-md shadow-[#4cc9f0]/10">
-                <div class="flex justify-between items-start">
-                    <h3 class="text-xl font-semibold text-[#4cc9f0]">Customer Feedback</h3>
-                    <span class="text-sm font-semibold bg-gray-400 text-[#0d1117] px-3 py-1 rounded-md">Future</span>
-                </div>
-                <p class="mt-2 mb-1 text-[#e6edf3]/90">Allow customers to share feedback on their tusok-tusok experience.</p>
-                <small class="text-gray-400 font-semibold">Priority: Low</small>
+                <?= view('components/cards/roadmap_card', [
+                    "title" => "Customer Feedback",
+                    "description" => "Allow customers to share feedback on their tusok-tusok experience.",
+                    "status" => "Future",
+                    "priority" => "Low",
+                    "statusClass" => "bg-gray-400"
+                ]) ?>
             </div>
         </section>
 
         <!-- Divider -->
-        <div class="border-b border-[#4cc9f0] my-14 w-[90%] max-w-lg mx-auto"></div>
+        <div class="border-t border-[#4cc9f0] my-16 w-[80%] mx-auto"></div>
 
         <!-- Completed Section -->
-        <section class="text-center mb-20">
-            <h2 class="text-2xl font-bold text-[#4cc9f0] mb-6">Completed</h2>
-
-            <div
-                class="bg-[#161b22] border border-[#4cc9f0] rounded-xl p-5 w-[90%] max-w-lg mx-auto shadow-md shadow-[#4cc9f0]/10">
-                <div class="flex justify-between items-start">
-                    <h3 class="text-xl font-semibold text-[#4cc9f0]">Authentication System</h3>
-                    <span class="text-sm font-semibold bg-[#16db65] text-[#0d1117] px-3 py-1 rounded-md">Completed</span>
-                </div>
-                <p class="mt-2 mb-1 text-[#e6edf3]/90">Secure login and signup system.</p>
-                <small class="text-[#ffb84c] font-semibold">Priority: High</small>
+        <section>
+            <h2 class="text-2xl font-bold text-[#4cc9f0] mb-8 text-center">Completed</h2>
+            <div class="flex flex-wrap justify-center gap-8">
+                <?= view('components/cards/roadmap_card', [
+                    "title" => "Authentication System",
+                    "description" => "Secure login and signup system.",
+                    "status" => "Completed",
+                    "priority" => "High",
+                    "statusClass" => "bg-[#16db65]"
+                ]) ?>
             </div>
         </section>
-    </div>
+
+    </main>
 
     <!-- Footer -->
     <?= view('components/footer') ?>
