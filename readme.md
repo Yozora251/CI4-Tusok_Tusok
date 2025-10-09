@@ -4,17 +4,16 @@
 <br/>
 
 <div align="center">
-  <a href="https://github.com/zyx-0314/">
-    <img src="./assets/img/nyebe_white.png" alt="Nyebe" width="130" height="100">
+  <a href="https://github.com/Yozora251">
+    <img src="/backend/public/assets/profile.jpg" alt="adrian" width="130" height="100">
   </a>
 <!-- * Title Section -->
-  <h3 align="center">AD - CI4 Template</h3>
+  <h3 align="center">AD - CI4 Tusok-Tusok</h3>
 </div>
 
 <!-- * Description Section -->
 <div align="center">
-This repository is a beginner-friendly CodeIgniter 4 template.  
-It helps teams quickly bootstrap backend + frontend projects, with simple sample modules that show how to extend the system.
+“Tusok-Tusok: Your favorite street food, now digital — order, track, and enjoy with ease!”
 </div>
 
 <br/>
@@ -55,22 +54,25 @@ It helps teams quickly bootstrap backend + frontend projects, with simple sample
 
 ## Overview
 
-This template provides a **minimal CodeIgniter 4 project layout** with conventions for file organization, commit practices, and simple modules.
+Tusok-Tusok is a **digital street food platform** that allows customers to explore, order, and enjoy popular street food items conveniently.
 
-It is designed to be **easy to start with** and a **reference for adding new features**.
+It is designed to be user-friendly, fast, and a central hub for discovering local favorites.
 
-* **Purpose**: a clean starting point for CI4 apps.
-* **Audience**: developers who want a predictable structure and quick onboarding.
+* **Purpose**: Provide a modern digital experience for street food enthusiasts.
+* **Audience**: Customers looking for easy access to street food.
 
 ### Key Components
 
 These are **sample modules** included (or suggested) for learning how to add features:
 
-| Component                 | Purpose                                                             | Notes                                                   |
-| ------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------- |
-| **Auth (Sample)**         | Basic login/logout and role check (admin/user).                     | Uses CI4 sessions + MySQL `users` table.                |
-| **CRUD Module**           | Example entity (`Posts` or `Tasks`) with create/read/update/delete. | Demonstrates Controller → Service → Repository pattern. |
-| **Scheduler (Sample)**    | Simple to-do list with due dates.                                   | Shows how to extend with new tables and services.       |
+| Component              | Purpose                                                       | Notes                                                |
+| ---------------------- | ------------------------------------------------------------- | ---------------------------------------------------- |
+| **Menu Listing**       | Display available street food items with details and pricing. | Allows filtering and categorization.                 |
+| **Order Management**   | Enable customers to place and track orders.                   | Supports real-time order status updates.             |
+| **User Accounts**      | Manage customer and vendor profiles.                          | Includes login, registration, and profile settings.  |
+| **Dashboard Overview** | View insights for vendors on orders and popular items.        | Shows sales trends and customer preferences.         |
+| **Customer Feedback**  | Collect and display reviews from customers.                   | Helps vendors improve offerings and service quality. |
+
 
  <!-- ! Start simple. Use these modules as **learning samples**; extend or replace them based on your project’s needs. -->
 
@@ -106,49 +108,10 @@ Run the development stack and the app (rebuild if needed):
 ```cmd
 docker compose up --watch
 ```
-
-Common utility commands (run inside the project root):
-
-- Run migrations:
 ```cmd
-docker compose exec php composer migrate
-```
-- Run seeders:
-```cmd
-docker compose exec php composer seed
-```
-- Run tests:
-```cmd
-docker compose exec php composer test
+docker compose exec php php spark make:controller Users
 ```
 
-- Create a migration (using CodeIgniter's spark tool):
-```cmd
-docker compose exec php php spark make:migration CreateUsersTabel
-```
-
-- Create a model (using CodeIgniter's spark tool):
-
-```cmd
-docker compose exec php php spark make:model UsemModel
-```
-
-- Create an entity (value object for a single record) (using CodeIgniter's spark tool):
-```cmd
-docker compose exec php php spark make:entity Uzer
-```
-
-- Create a controller (add --resource to scaffold resourceful methods if you like) (using CodeIgniter's spark tool):
-```cmd
-docker compose exec php php spark make:controller Usars
-```
-
-- Create a seeder (for test/dev data) (using CodeIgniter's spark tool):
-```cmd
-docker compose exec php php spark make:seeder UserzSeeder
-```
-
-If you prefer, you can include `-f "compose.yaml"` explicitly; the shorter commands above work when running from the repo root.
 
 ## Ports & Database
 
@@ -157,8 +120,6 @@ Defaults used in this project (host mapping):
 | Service     | Host port |
 |-------------|-----------:|
 | nginx (app) | 8090      |
-| phpMyAdmin  | 8091      |
-| MySQL       | 3390      |
 
 Database credentials used in examples and CI:
 
@@ -219,8 +180,6 @@ AD-ProjectName/
 | Title                   | Purpose                                                               | Link                                                                       |
 | ----------------------- | --------------------------------------------------------------------- | -------------------------------------------------------------------------- |
 | ChatGPT                 | General AI assistance for planning application architecture and docs. | [https://chat.openai.com](https://chat.openai.com)                         |
-| GitHub Copilot          | In-IDE code suggestions and boilerplate generation.                   | [https://github.com/features/copilot](https://github.com/features/copilot) |
-| YouTube “UI/UX Design”  | Video tutorials on modern web interface layouts and patterns.         | [https://www.youtube.com](https://www.youtube.com)                         |
 | Pinterest Design Boards | Inspiration for color schemes, typography, and component layouts.     | [https://www.pinterest.com](https://www.pinterest.com)                     |
 | Google Photos (Assets)  | Stock imagery and graphics used in UI mockups and documentation.      | [https://photos.google.com](https://photos.google.com)                     |
 | System Documentation    | Internal docs from PHP, MongoDB, and PostgreSQL used in development.  | — (see `/docs` folder in repo)                                             |
