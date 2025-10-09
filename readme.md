@@ -5,7 +5,7 @@
 
 <div align="center">
   <a href="https://github.com/Yozora251">
-    <img src="/backend/public/assets/profile.jpg" alt="adrian" width="130" height="100">
+    <img src="/backend/public/assets/profile.png" alt="adrian" width="130" height="100">
   </a>
 <!-- * Title Section -->
   <h3 align="center">AD - CI4 Tusok-Tusok</h3>
