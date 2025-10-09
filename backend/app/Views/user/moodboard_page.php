@@ -15,106 +15,95 @@
     </style>
 </head>
 
-<body class="bg-[#0d1117] text-[#e6edf3]">
+<body class="bg-[#0d1117] text-[#e6edf3] flex flex-col min-h-screen">
 
-    <main class="p-10">
+    <!-- Header -->
+    <?= view('components/header') ?>
 
-        <?= view('components/buttons/back_button.php') ?>
+    <!-- Main -->
+    <main class="flex-grow max-w-7xl mx-auto px-6 py-12">
 
-
-        <h1 class="text-3xl font-bold text-[#4cc9f0] mb-3">Tusok-Tusok Mood Board</h1>
-        <p class="text-[#e6edf3]/90">Visual identity and design system for the Tusok-Tusok web application.</p>
-
-        <div class="border-b border-[#4cc9f0] my-8"></div>
+        <!-- Hero Section -->
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold text-[#4cc9f0] mb-3">Tusok-Tusok Mood Board</h1>
+            <p class="text-[#e6edf3]/90 text-lg">Explore the visual identity and design system for Tusok-Tusok web application.</p>
+        </header>
 
         <!-- Color System -->
-        <section>
-            <h2 class="text-2xl font-bold text-[#4cc9f0]">Color System</h2>
-            <p>Main palette featuring shades of dark blue, cyan, and white.</p>
-            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 mt-5">
-                <div>
-                    <div class="h-12 rounded-md mb-2 bg-[#0d1117]"></div>
-                    <p>#0D1117 (Background)</p>
-                </div>
-                <div>
-                    <div class="h-12 rounded-md mb-2 bg-[#161b22]"></div>
-                    <p>#161B22 (Card Surface)</p>
-                </div>
-                <div>
-                    <div class="h-12 rounded-md mb-2 bg-[#4cc9f0]"></div>
-                    <p>#4CC9F0 (Accent Blue)</p>
-                </div>
-                <div>
-                    <div class="h-12 rounded-md mb-2 bg-[#3a86ff]"></div>
-                    <p>#3A86FF (Primary)</p>
-                </div>
-                <div>
-                    <div class="h-12 rounded-md mb-2 bg-[#e6edf3]"></div>
-                    <p>#E6EDF3 (Text Color)</p>
-                </div>
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-[#4cc9f0] mb-6">Color System</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6">
+                <?php
+                $colors = [
+                    ['hex' => '#0D1117', 'name' => 'Background'],
+                    ['hex' => '#161B22', 'name' => 'Card Surface'],
+                    ['hex' => '#4CC9F0', 'name' => 'Accent Blue'],
+                    ['hex' => '#3A86FF', 'name' => 'Primary'],
+                    ['hex' => '#E6EDF3', 'name' => 'Text Color'],
+                ];
+                foreach ($colors as $color): ?>
+                    <div class="text-center">
+                        <div class="h-12 w-full rounded-md mb-2" style="background-color: <?= $color['hex'] ?>"></div>
+                        <p><?= $color['hex'] ?> (<?= $color['name'] ?>)</p>
+                    </div>
+                <?php endforeach; ?>
             </div>
         </section>
-
-        <div class="border-b border-[#4cc9f0] my-8"></div>
 
         <!-- Typography -->
-        <section>
-            <h2 class="text-2xl font-bold text-[#4cc9f0] mb-2">Typography</h2>
-            <p><strong>Heading font:</strong> Poppins — <span class="text-[#4cc9f0]">"Taste the Street"</span></p>
-            <p><strong>Body font:</strong> Poppins Regular — "Your everyday tusok-tusok made digital."</p>
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-[#4cc9f0] mb-6">Typography</h2>
+            <div class="grid gap-6 md:grid-cols-2">
+                <div>
+                    <p class="text-gray-400 text-sm">Heading font</p>
+                    <p class="font-sample font-semibold">Poppins — "Taste the Street"</p>
+                </div>
+                <div>
+                    <p class="text-gray-400 text-sm">Body font</p>
+                    <p class="font-sample">Poppins Regular — "Your everyday tusok-tusok made digital."</p>
+                </div>
+            </div>
         </section>
-
-        <div class="border-b border-[#4cc9f0] my-8"></div>
 
         <!-- Buttons -->
-        <section>
-            <h2 class="text-2xl font-bold text-[#4cc9f0] mb-3">Buttons</h2>
-            <div class="mb-5">
-                <p class="mb-2">Light Mode</p>
-                <button class="bg-[#3a86ff] text-white px-4 py-2 rounded-md mr-2">Primary</button>
-                <button class="bg-[#4cc9f0] text-[#0d1117] px-4 py-2 rounded-md mr-2">Secondary</button>
-                <button class="border border-white px-4 py-2 rounded-md mr-2">Outline</button>
-                <button class="bg-gray-600 text-gray-300 px-4 py-2 rounded-md cursor-not-allowed" disabled>Disabled</button>
-            </div>
-            <div>
-                <p class="mb-2">Dark Mode</p>
-                <button class="bg-[#4cc9f0] text-[#0d1117] px-4 py-2 rounded-md mr-2">Primary</button>
-                <button class="bg-[#3a86ff] text-white px-4 py-2 rounded-md mr-2">Secondary</button>
-                <button class="border border-[#4cc9f0] text-[#4cc9f0] px-4 py-2 rounded-md mr-2">Outline</button>
-                <button class="bg-gray-700 text-gray-400 px-4 py-2 rounded-md cursor-not-allowed" disabled>Disabled</button>
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-[#4cc9f0] mb-4">Buttons</h2>
+            <div class="flex flex-wrap gap-4 mb-6">
+                <?= view('components/buttons/button_primary', ['text' => 'Primary', 'link' => '#']) ?>
+                <?= view('components/buttons/button_secondary', ['text' => 'Secondary', 'link' => '#']) ?>
+                <?= view('components/buttons/button_border', ['text' => 'Outline', 'link' => '#']) ?>
+                <?= view('components/buttons/button_primary', ['text' => 'Disabled', 'link' => '#', 'disabled' => true]) ?>
             </div>
         </section>
 
-        <div class="border-b border-[#4cc9f0] my-8"></div>
-
-        <!-- Card Samples -->
-        <section>
-            <h2 class="text-2xl font-bold text-[#4cc9f0] mb-3">Card Samples</h2>
-            <div class="grid md:grid-cols-3 gap-6">
-                <div class="bg-[#161b22] border border-[#4cc9f0] rounded-lg p-5">
-                    <h4 class="font-semibold text-lg mb-2">Orders Completed</h4>
-                    <p class="text-xl">1,254</p>
-                    <a href="#" class="text-[#4cc9f0] mt-2 inline-block">View Details</a>
-                </div>
-                <div class="bg-[#161b22] border border-[#4cc9f0] rounded-lg p-5">
-                    <h4 class="font-semibold text-lg mb-2">Top Seller</h4>
-                    <p>Fishball Combo</p>
-                    <a href="#" class="text-[#4cc9f0] mt-2 inline-block">View Details</a>
-                </div>
-                <div class="bg-[#161b22] border border-[#4cc9f0] rounded-lg p-5">
-                    <h4 class="font-semibold text-lg mb-2">Customer Review</h4>
-                    <p>"Best tusok-tusok experience ever!"</p>
-                    <small>– Juan Dela Cruz</small>
-                </div>
+        <!-- Cards -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-[#4cc9f0] mb-6">Card Samples</h2>
+            <div class="grid gap-6 md:grid-cols-3">
+                <?= view('components/cards/landing_card', [
+                    'title' => 'Orders Completed',
+                    'excerpt' => '1,254',
+                    'image' => null
+                ]) ?>
+                <?= view('components/cards/landing_card', [
+                    'title' => 'Top Seller',
+                    'excerpt' => 'Fishball Combo',
+                    'image' => null
+                ]) ?>
+                <?= view('components/cards/roadmap_card', [
+                    'title' => 'Customer Review',
+                    'description' => '"Best tusok-tusok experience ever!" – Juan Dela Cruz',
+                    'status' => 'Featured',
+                    'priority' => 'High',
+                    'statusClass' => 'bg-[#4cc9f0]'
+                ]) ?>
             </div>
         </section>
-
-        <div class="border-b border-[#4cc9f0] my-8"></div>
 
         <!-- Logos -->
-        <section>
-            <h2 class="text-2xl font-bold text-[#4cc9f0] mb-3">Logos</h2>
-            <div class="flex flex-wrap gap-8 mt-4">
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-[#4cc9f0] mb-6">Logos</h2>
+            <div class="grid gap-8 md:grid-cols-2">
                 <div class="text-center">
                     <img src="/assets/circle.png" alt="Circle Logo" class="w-32 rounded-lg shadow-lg shadow-[#4cc9f0]/50 mx-auto mb-2">
                     <p>Main Logo – Circle</p>
@@ -129,7 +118,9 @@
     </main>
 
     <!-- Footer -->
-    <?= view('components/footer') ?>
+    <footer class="mt-auto">
+        <?= view('components/footer') ?>
+    </footer>
 
 </body>
 

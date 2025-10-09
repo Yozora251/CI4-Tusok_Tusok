@@ -1,12 +1,13 @@
 <?php
-$backButton = [
-    "href" => "/",
-    "label" => "← Back Home",
-    "class" => "bg-[#4cc9f0] text-[#0d1117] font-semibold rounded-lg hover:bg-[#3a86ff] hover:text-white transition"
-];
+// File: app/Views/components/buttons/back_button.php
+// Variables:
+// $link (string)
+// $text (string) optional
+$link = $link ?? '/';
+$text = $text ?? '← Back Home';
 ?>
 
-<a href="<?= htmlspecialchars($backButton['href']) ?>"
-    class="<?= htmlspecialchars($backButton['class']) ?> px-5 py-2 inline-block mb-6 transition-transform hover:scale-105">
-    <?= htmlspecialchars($backButton['label']) ?>
+<a href="<?= htmlspecialchars($link) ?>"
+    class="inline-block bg-[#4cc9f0] text-[#0d1117] font-semibold rounded-lg px-5 py-2 hover:bg-[#3a86ff] hover:text-white transition">
+    <?= htmlspecialchars($text) ?>
 </a>
