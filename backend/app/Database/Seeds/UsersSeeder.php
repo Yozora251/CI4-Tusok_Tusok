@@ -25,6 +25,7 @@ class UsersSeeder extends Seeder
                 'email_activated' => '1',
                 'created_at' => $now,
                 'updated_at' => $now,
+                'deleted_at' => $now,
             ],
             [
                 'first_name' => 'Mary Arwen',
@@ -37,6 +38,7 @@ class UsersSeeder extends Seeder
                 'email_activated' => '1',
                 'created_at' => $now,
                 'updated_at' => $now,
+                'deleted_at' => $now,
             ]
         ];
 
