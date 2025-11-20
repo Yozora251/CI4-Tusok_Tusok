@@ -19,4 +19,4 @@ $routes->post('/logout', 'Auth::logout');
 $routes->post('/signup', 'Auth::signup');
 
 
-$routes->get('/admin/dashboard', 'Admin::showDashboard');
+$routes->get('/admin/dashboard', 'Admin::dashboard');
